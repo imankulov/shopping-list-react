@@ -42,6 +42,20 @@ docker-compose up -d
 ```
 
 
+## Initializing Heroku Installation
+
+```
+heroku apps:create <your-app-name>
+heroku buildpacks:set heroku/python
+heroku buildpacks:add --index 1 heroku/nodejs
+```
+
+Add MongoDB from mongolab
+
+```
+heroku addons:create mongolab:sandbox
+```
+
 
 ## Available Scripts
 

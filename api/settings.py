@@ -1,3 +1,5 @@
+import os
+
 # Common settings
 URL_PREFIX = "api"
 
@@ -27,6 +29,4 @@ RESOURCE_METHODS = ["GET", "POST", "DELETE"]
 ITEM_METHODS = ["GET", "PATCH", "PUT", "DELETE"]
 
 # MongoDB connection
-MONGO_HOST = "localhost"
-MONGO_PORT = 27017
-MONGO_DBNAME = "shopping"
+MONGO_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017/shopping")
